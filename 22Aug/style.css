@@ -1,0 +1,108 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --accent: rgb(226, 165, 66);
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  color: #222;
+  background-color: beige;
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 20px;
+  grid-area: header;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: beige;
+  text-decoration: none;
+  transition: 0.13s;
+}
+
+header nav ul li a:hover {
+  color: var(--accent);
+  text-decoration: overline;
+}
+
+aside {
+  grid-area: aside;
+  background-color: #2b2826;
+}
+
+aside nav {
+  display: flex;
+}
+
+aside nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+aside nav ul li {
+  margin: 20px;
+}
+
+aside nav ul li a {
+  color: beige;
+  text-decoration: none;
+  transition: 0.13s;
+  font-size: large;
+}
+
+aside nav ul li a:hover {
+  color: var(--accent);
+}
+
+main {
+  grid-area: main;
+  margin: 20px;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(196, 182, 166);
+  grid-area: footer;
+}
+
+footer p {
+  margin: 5px;
+}
